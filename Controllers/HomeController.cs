@@ -13,7 +13,7 @@ namespace EmailProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IEmailServices         ;
+        private readonly IEmailServices        eg ;
         public HomeController(ILogger<HomeController> logger , IEmailServices _eg)
         {
             _logger = logger;
