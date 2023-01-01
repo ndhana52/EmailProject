@@ -13,7 +13,7 @@ namespace EmailProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IEmailServices         ;
+        private readonly IEmailServices       eg  ;
         public HomeController(ILogger<HomeController> logger , IEmailServices _eg)
         {
             _logger = logger;
@@ -37,20 +37,29 @@ namespace EmailProject.Controllers
         //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         //}
 
-        public async Task<string> Index()
+        //public async Task<string> Index()
+        //{
+        //    UserEmailOptions o = new UserEmailOptions
+        //    {
+        //        ToEmails = new List<string>() { "syamreddy52@gmail.com"}
+        //    };
+
+        //    await eg.SendTestEmail(o);
+
+
+        //    return "view";
+        //}
+        public ViewResult Index()
         {
-            UserEmailOptions o = new UserEmailOptions
-            {
-                ToEmails = new List<string>() { "syamreddy52@gmail.com"}
-            };
-
-            await eg.SendTestEmail(o);
-
-
-            return "view";
-
-          
+            return View();
         }
-        
+
+        public ViewResult MyNamee()
+        {
+            return View("dhanu");
+            View()
+
+        }
+       
     }
 }
